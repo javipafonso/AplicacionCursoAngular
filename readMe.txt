@@ -10,6 +10,7 @@ Vamos a trabajar con TypeScript (tipos y anotaciones)
 Instalar npm install -g ts-node and typescript
 Programación de observables en angular esta basado en reactivex
 e2e test endpoint
+SVG incrustada directamente como cadena.
 
 ng new -p  (asignar prefijo a la app)
 ng new primeraAppAngular --strict=false --prefix=vwn --routing=true --style=scss (responde directamente a las preguntas)
