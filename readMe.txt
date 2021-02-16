@@ -11,6 +11,15 @@ Instalar npm install -g ts-node and typescript
 Programación de observables en angular esta basado en reactivex
 e2e test endpoint
 SVG incrustada directamente como cadena.
-
+Las librerías de css, en este caso bootstrap, se recomienda instalar 
+dentro de la carpeta del proyecto (no de manera global). Se añade dentro
+del angular.json (links en la web, tanto script, como css)
+Crear componentes con schematics, usar ng g (para ver que podemos crear)
+Modulo comun a todo la aplicación dentro de app.
+    modulo central (module core)
+    modulo exportable se ve toda la app.
+    Componente ng g c core/head --dry-run
 ng new -p  (asignar prefijo a la app)
+con la opción --dry-run (hace una simulación de lo que vas a crear)
 ng new primeraAppAngular --strict=false --prefix=vwn --routing=true --style=scss (responde directamente a las preguntas)
+bootstrap trabaja con lineas
