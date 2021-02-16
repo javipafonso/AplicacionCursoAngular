@@ -1,0 +1,6 @@
+<div class="col-12">
+    <h2>Componente Saludo</h2>
+    <input type="text" [placeholder]="message" [(ngModel)]="name" />
+    <p>Hola {{ name ? name : 'amigo'.toLowerCase() }}</p>
+    <button type="button" (click)="onClick($event)">Clear</button>
+</div>

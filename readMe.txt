@@ -27,3 +27,9 @@ Cuando pones [] es cuando estás accediendo a propiedades.
 Se recomienda inicializar las variables en el onInit del Componente
 Hay que crear el modulo de enrutamiento en un vector, poner las rutas, en routing.ts.
 Lazy-Load es que carga cuando lo necesitas (en los componentes mediante los import)
+En angular $event en los eventos capturas las propiedades del evento.
+ngModel binding biredeccional, escribes en un input y se escribe en el texto.
+Ref locales # querySelector en JavaScript para acceder a un elemento del dom. Programación declarativa
+@ViewChild para ver referencias en la vista y acceder al dom
+Tener cuidado cuando accedemos a propiedades del elemento por el ciclo de vida del componente y el 
+renderizado.

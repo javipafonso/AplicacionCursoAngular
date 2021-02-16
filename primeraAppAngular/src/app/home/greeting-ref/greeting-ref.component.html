@@ -1,0 +1,7 @@
+<div class="col-12">
+    <h2>Componente Saludo Ref</h2>
+    <input type="text" placeholder="Tell us your name" (input)="name.value=name.value" #name />
+    <p>Hola {{ name.value ? name.value : 'amigo'.toLowerCase() }}</p>
+    <button type="button" (click)="name.value=''">Clear</button>
+    <!--<button type="button" (click)="name.value=name.value">Save</button>-->
+</div>
