@@ -8,8 +8,10 @@ import { Component, OnInit } from '@angular/core';
 export class HeadComponent implements OnInit {
   //definimos las variables
   titulo : string;
+  logo : string;
   constructor() { 
-    this.titulo = 'Curso Angular 11 para ViewNext'
+    this.titulo = 'Curso Angular 11 para ViewNext',
+    this.logo = '../../assets/logo/logo.svg'
   }
 
   ngOnInit(): void {

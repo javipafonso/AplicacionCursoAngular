@@ -23,3 +23,4 @@ ng new -p  (asignar prefijo a la app)
 con la opción --dry-run (hace una simulación de lo que vas a crear)
 ng new primeraAppAngular --strict=false --prefix=vwn --routing=true --style=scss (responde directamente a las preguntas)
 bootstrap trabaja con lineas
+Cuando pones [] es cuando estás accediendo a propiedades.
