@@ -3,13 +3,14 @@ import { CommonModule } from '@angular/common';
 import { HeadComponent } from './head/head.component';
 import { FooterComponent } from './footer/footer.component';
 import { MenuComponent } from './menu/menu.component';
+import { RouterModule } from '@angular/router';
 
 
 
 @NgModule({
   declarations: [HeadComponent, FooterComponent, MenuComponent],
   imports: [
-    CommonModule
+    CommonModule, RouterModule
   ],
   exports: [HeadComponent,FooterComponent]
 })

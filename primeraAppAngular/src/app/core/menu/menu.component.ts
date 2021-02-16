@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-
 @Component({
   selector: 'vwn-menu',
   templateUrl: './menu.component.html',

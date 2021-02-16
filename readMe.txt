@@ -24,3 +24,5 @@ con la opción --dry-run (hace una simulación de lo que vas a crear)
 ng new primeraAppAngular --strict=false --prefix=vwn --routing=true --style=scss (responde directamente a las preguntas)
 bootstrap trabaja con lineas
 Cuando pones [] es cuando estás accediendo a propiedades.
+Se recomienda inicializar las variables en el onInit del Componente
+Hay que crear el modulo de enrutamiento en un vector, poner las rutas, en routing.ts.
