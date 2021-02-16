@@ -26,3 +26,4 @@ bootstrap trabaja con lineas
 Cuando pones [] es cuando estás accediendo a propiedades.
 Se recomienda inicializar las variables en el onInit del Componente
 Hay que crear el modulo de enrutamiento en un vector, poner las rutas, en routing.ts.
+Lazy-Load es que carga cuando lo necesitas.
