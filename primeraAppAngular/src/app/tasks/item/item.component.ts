@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Task } from 'src/app/models/task';
 
 @Component({
@@ -9,13 +9,22 @@ import { Task } from 'src/app/models/task';
 export class ItemComponent implements OnInit {
   
   @Input() task: Task;
-  constructor() { }
-  
+  @Input() index: number;
+  @Output() evCheck: EventEmitter<number>
+  @Output() evDelete: EventEmitter<number>
+  constructor() { 
+    this.evCheck = new EventEmitter()
+    this.evDelete = new EventEmitter()
+  }
   ngOnInit(): void {
-    
+  
+    this.task = {...this.task}
+  }
+  change(){
+    this.evCheck.next(this.index)
   }
   delete(){
-
+    this.evDelete.next(this.index)
   }
 
 }

@@ -1,10 +1,25 @@
 <h2>Simple tasks list</h2>
-
+<h3>Nueva tarea</h3>
+<div class="form-group">
+    <input class="form-control" type="text" [(ngModel)]="task.nombre" placeholder="Describe la tarea">
+</div>
+<div class="form-group">
+    <label for="responsable">Responsable</label>
+    <input class="form-control" id="responsable" type="text" [(ngModel)]="task.responsable">
+</div>
+<div class="form-group">
+    <button type="button" class="btn btn-primary" (click)="add()">Añadir</button>
+    <button type="button" class="btn btn-primary" (click)="delete()">Borrar todas</button>
+</div>
 
 <ng-container *ngIf="tasks.length;else aviso">
     <h3>Tasks List</h3>
     <ul class="list-group">
-        <li class="list-group-item" *ngFor="let item of tasks">Tarea: {{ item.nombre}} | Responsable: {{ item.responsable }}</li>
+        <div class="row">
+            <li class="list-group-item" *ngFor="let item of tasks">
+                {{item.nombre}} | Responsable: {{item.responsable}}
+            </li>
+        </div>
     </ul>
 </ng-container>
 <ng-template #aviso>

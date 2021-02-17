@@ -12,6 +12,10 @@ const routes: Routes = [
   path: 'about', 
   loadChildren: () => import('./about/about.module').then(m => m.AboutModule)
 },
+{
+  path: 'course', 
+  loadChildren: () => import('./courses/courses.module').then(m => m.CoursesModule)
+},
 { path: '', pathMatch: 'full', redirectTo: 'home' },
 //componente errores { path: '**', component: PathNotFoundComponent }
 { path: '**', redirectTo: 'home' }

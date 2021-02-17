@@ -8,21 +8,34 @@ import { Task } from 'src/app/models/task';
 })
 export class ListaComponent implements OnInit {
   tasks : Array<Task>;
+  store: string;
   constructor() { }
 
   ngOnInit(): void {
-    this.tasks = [];
+    this.store='tasks';
+    this.tasks = localStorage.getItem(this.store) 
+        ? JSON.parse(localStorage.getItem(this.store)) : []
+
   }
   addTask(task : Task){
     if (!task.nombre){
       return
     }
     this.tasks.push(task);
-    console.log(this.tasks);
+    this.saveStore();
       
   }
   deleteTasks(){
     this.tasks = [];
+    this.saveStore();
     
   }
+  changeState(index: number) {
+    this.tasks[index].isCompleted = !this.tasks[index].isCompleted
+    this.saveStore()
+  }
+  saveStore() {
+    localStorage.setItem(this.store, JSON.stringify(this.tasks))
+  }
+
 }
