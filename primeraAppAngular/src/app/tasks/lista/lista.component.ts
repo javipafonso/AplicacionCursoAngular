@@ -26,7 +26,7 @@ export class ListaComponent implements OnInit {
       
   }
   deleteTasks(){
-    this.tasks = [];
+    this.tasks = []
     this.saveStore();
     
   }
@@ -36,6 +36,11 @@ export class ListaComponent implements OnInit {
   }
   saveStore() {
     localStorage.setItem(this.store, JSON.stringify(this.tasks))
+  }
+  deleteOneTask(index: number){
+    this.tasks.splice(index,1)
+    this.saveStore()
+
   }
 
 }
