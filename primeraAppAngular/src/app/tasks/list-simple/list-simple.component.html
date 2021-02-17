@@ -1,0 +1,12 @@
+<h2>Simple tasks list</h2>
+
+
+<ng-container *ngIf="tasks.length;else aviso">
+    <h3>Tasks List</h3>
+    <ul class="list-group">
+        <li class="list-group-item" *ngFor="let item of tasks">Tarea: {{ item.nombre}} | Responsable: {{ item.responsable }}</li>
+    </ul>
+</ng-container>
+<ng-template #aviso>
+    <p>let's go</p>
+</ng-template>

@@ -3,9 +3,10 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'vwn-tasks',
   template: `
-    <p>
-      tasks works!
-    </p>
+  <div class="row">
+    <vwn-lista class="col-6"></vwn-lista>
+    <vwn-list-simple class="col-6"></vwn-list-simple>
+</div>
   `,
   styles: [
   ]

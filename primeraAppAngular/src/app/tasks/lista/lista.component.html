@@ -1,0 +1,14 @@
+<h2>List MultiElement</h2>
+<vwn-nueva (eventAdd)="addTask($event)" (eventDelete)="deleteTasks()">
+    <ng-container *ngIf="tasks.length;else aviso">
+        <h3>Tasks List</h3>
+        <ul class="list-group">
+            <li class="list-group-item" *ngFor="let item of tasks">
+                <vwn-item [task]="item"></vwn-item>
+            </li>
+        </ul>
+    </ng-container>
+    <ng-template #aviso>
+        <p>let's go</p>
+    </ng-template>
+</vwn-nueva>

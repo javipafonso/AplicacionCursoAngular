@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
     <div class="row">
       <vwn-greeting class="col-6"></vwn-greeting>
       <vwn-greeting-ref class="col-6"></vwn-greeting-ref>
+      <vwn-greeting-rx class="col-6"></vwn-greeting-rx>
     </div>
   `,
   styles: [
