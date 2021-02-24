@@ -33,3 +33,8 @@ Ref locales # querySelector en JavaScript para acceder a un elemento del dom. Pr
 @ViewChild para ver referencias en la vista y acceder al dom
 Tener cuidado cuando accedemos a propiedades del elemento por el ciclo de vida del componente y el 
 renderizado.
+Providers no crearlos dentro un componente concreto. NullproviderError (falta declarar el provider o importar)
+Distribuir las tareas (que cada componente haga para lo que fue concebido)
+Almacenamiento no hacerlo dentro de los componentes.
+Mocks simulación de datos
+Cuando tienes un objecto externo y no tienes esa propiedad puede hacerse con any.

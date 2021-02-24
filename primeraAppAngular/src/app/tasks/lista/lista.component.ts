@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Task } from 'src/app/models/task';
+import { StorageService } from 'src/app/services/storage.service';
 
 @Component({
   selector: 'vwn-lista',
@@ -8,13 +9,14 @@ import { Task } from 'src/app/models/task';
 })
 export class ListaComponent implements OnInit {
   tasks : Array<Task>;
-  store: string;
-  constructor() { }
+  //store: string;
+  constructor(private servStorage : StorageService) { }
 
   ngOnInit(): void {
-    this.store='tasks';
-    this.tasks = localStorage.getItem(this.store) 
-        ? JSON.parse(localStorage.getItem(this.store)) : []
+    this.tasks = this.servStorage.getTask();
+    //this.store='tasks';
+    /*this.tasks = localStorage.getItem(this.store) 
+        ? JSON.parse(localStorage.getItem(this.store)) : []*/
 
   }
   addTask(task : Task){
@@ -34,8 +36,10 @@ export class ListaComponent implements OnInit {
     this.tasks[index].isCompleted = !this.tasks[index].isCompleted
     this.saveStore()
   }
-  saveStore() {
-    localStorage.setItem(this.store, JSON.stringify(this.tasks))
+  private saveStore() {
+    const number = this.servStorage.setTask(this.tasks);
+    console.log('Savado número', number);
+    //localStorage.setItem(this.store, JSON.stringify(this.tasks))
   }
   deleteOneTask(index: number){
     this.tasks.splice(index,1)

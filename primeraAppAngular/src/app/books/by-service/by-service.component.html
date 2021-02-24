@@ -1,0 +1,16 @@
+<h2>Books google vyService</h2>
+<input type="text" placeholder="Key search" [(ngModel)]="key" />
+<button (click)="onSearch()">Search</button>
+<!--<button (click)="onSearchRx()">Search Rx</button>-->
+<!-- <button (click)="onSearchAsync()">Search Async</button>
+<button (click)="onSearchAsyncRx()">Search Rx</button> -->
+
+<div *ngIf="books.length">
+    <h3>Books List</h3>
+    <ul>
+        <li *ngFor="let book of books">
+            {{ book.title}} - {{ book.autores}}
+        </li>
+    </ul>
+
+</div>

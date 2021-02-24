@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Task } from 'src/app/models/task';
+import { StorageService } from 'src/app/services/storage.service';
 
 @Component({
   selector: 'vwn-list-simple',
@@ -11,10 +12,10 @@ export class ListSimpleComponent implements OnInit {
   tasks : Array<Task>;
   task : Task;
 
-  constructor() { }
+  constructor(private servStorage : StorageService) { }
 
   ngOnInit(): void {
-    this.tasks = []
+    this.tasks = this.servStorage.getTask();
     this.task = new Task();
   }
 
@@ -24,10 +25,15 @@ export class ListSimpleComponent implements OnInit {
     }
     this.tasks.push(this.task);
     this.task = new Task();
-    console.log(this.task);
+    //console.log(this.task);
+    this.salvar();
   }
   delete(){
     this.tasks = [];
-    console.log(this.task);
+    this.salvar();
+  }
+  private salvar(){
+    const number = this.servStorage.setTask(this.tasks);
+    console.log('Salvado',number);
   }
 }
